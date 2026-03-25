@@ -51,7 +51,8 @@ public class GazePointer : MonoBehaviour
             {
                 return result.gameObject;
             }
-            return null;
+            
         }
+        return null;
     }
 }
