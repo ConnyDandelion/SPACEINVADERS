@@ -48,7 +48,7 @@ public class GazePointer : MonoBehaviour
     {
         foreach(RaycastResult result in results)
         {
-            if(((1<< result.gameObject.layer) & interactableLayer) != 0);
+            if(((1<< result.gameObject.layer) & interactableLayer) != 0)
             {
                 return result.gameObject;
             }

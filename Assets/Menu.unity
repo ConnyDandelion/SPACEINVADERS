@@ -706,9 +706,10 @@ MonoBehaviour:
   onPointerClick:
     m_PersistentCalls:
       m_Calls: []
-  onPointerEnterAnitationName: PointerEnter
+  onPointerEnterAnimationName: PointerEnter
   onPointExitAnimationName: PointerExit
   onPointerClickAnimationName: PointerClick
+  animator: {fileID: 706980600}
 --- !u!1 &712303521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1294,8 @@ PrefabInstance:
       propertyPath: _recticleInteractionLayerMask.m_Bits
       value: 256
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1323,15 +1325,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5105367422879751662, guid: 1e36aeceb346e66469f2a1f775e4d1a3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.059
+      value: 0.031
       objectReference: {fileID: 0}
     - target: {fileID: 5105367422879751662, guid: 1e36aeceb346e66469f2a1f775e4d1a3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0.086
       objectReference: {fileID: 0}
     - target: {fileID: 5105367422879751662, guid: 1e36aeceb346e66469f2a1f775e4d1a3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.081
+      value: 2.013
       objectReference: {fileID: 0}
     - target: {fileID: 5105367422879751662, guid: 1e36aeceb346e66469f2a1f775e4d1a3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1365,10 +1367,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Drone
       objectReference: {fileID: 0}
+    - target: {fileID: 5167496889982144543, guid: 1e36aeceb346e66469f2a1f775e4d1a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5167496889982144543, guid: 1e36aeceb346e66469f2a1f775e4d1a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1916663078}
   m_SourcePrefab: {fileID: 100100000, guid: 1e36aeceb346e66469f2a1f775e4d1a3, type: 3}
 --- !u!1 &1518033079
 GameObject:
@@ -1483,8 +1492,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1420918495}
-  - component: {fileID: 1784218472}
   - component: {fileID: 1784218471}
+  - component: {fileID: 1784218472}
   m_Layer: 2
   m_Name: CardboardReticlePointer
   m_TagString: Untagged
@@ -1544,15 +1553,46 @@ MeshRenderer:
 --- !u!114 &1784218472
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 723926960, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
-  m_PrefabInstance: {fileID: 1420918494}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784218470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: b877261a1cf96d0439385b248e93f157, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Google.XR.Cardboard::CardboardReticlePointer
+  ReticleSortingOrder: 32767
+  ReticleInteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!1 &1916663076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5167496889982144543, guid: 1e36aeceb346e66469f2a1f775e4d1a3, type: 3}
+  m_PrefabInstance: {fileID: 1466751646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1916663078
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916663076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e15010e093df86f4dba4e8654ef93f4a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2072060704
 GameObject:
   m_ObjectHideFlags: 0
